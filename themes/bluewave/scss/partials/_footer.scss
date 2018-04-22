@@ -1,0 +1,67 @@
+.footer {
+    padding:20px 0;
+    .logo-mark {
+        display: inline-block;
+        float:left;
+        margin-right: 20px;
+        @include breakpoint(xs) {
+            float:none;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+        img {
+            float:none;
+        }
+    }
+    p {
+        color:$md-gray;
+        font-size:14px;
+        line-height: 18px;
+        @include breakpoint(xs) {
+            text-align: center;
+        }
+    }
+    i {
+        background: #d5d5d5;
+        border: 2px solid transparent;
+        color:#fff;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 100%;
+        padding: 8px;
+        font-size: 0;
+        vertical-align: top;
+        @include transition(color 0.3s linear, border-top-color 0.15s linear 0s, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s);            
+        &::before {
+            font-size:20px;
+        }
+        &.icon-facebook {
+            &:hover, &:focus {
+                color:#3b5998;
+                border-color: #3b5998;
+            }
+        }
+        &.icon-twitter {
+            &:hover, &:focus {
+                color:#1da1f2;
+                border-color: #1da1f2;
+            }
+        }
+        &.icon-youtube {
+            &:hover, &:focus {
+                color:#ff0000;
+                border-color: #ff0000;
+            }
+        }
+        &.icon-slack {
+            padding:9px 8px 8px 9px;
+            &:hover, &:focus {
+                color:$dk-gray;
+                border-color: #6ecadc #e9a820 #e01563 #3eb991;
+            }
+        }
+    }
+}

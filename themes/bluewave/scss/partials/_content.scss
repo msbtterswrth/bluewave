@@ -1,0 +1,181 @@
+.featured-candidate {
+    background:$lt-gray;
+    padding:60px 0;
+    @include breakpoint(xs){
+        padding:20px 0 50px;
+    }
+    .img {
+        position: relative;
+        overflow: hidden;
+        @include breakpoint(xs){
+            margin-bottom:30px;
+        }
+        &::before {
+            background: rgba($blue,.6);
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            left: 0;
+            top: 150%;
+            pointer-events: none;
+            @include rotate(60);
+            @include transition(top .3s $cubic);
+            @include breakpoint(xs){
+                top:55%;
+            }
+        }
+        &:hover {
+            &::before {
+                top: 55%;
+            }
+            .name {
+                right:0;
+            }
+        }
+        .name {
+            position: absolute;
+            right: -100%;
+            bottom: 0;
+            padding: 20px;
+            pointer-events: none;
+            text-align: right;
+            @include transition(right .5s $cubic);
+            @include breakpoint(xs){
+                right:0%;
+            }
+            h3 {
+                color:#fff;
+                margin-top: 0;
+            }
+            small {
+                color: #fff;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+.candidate {
+    > .row {
+        &:first-of-type {
+            margin-bottom:80px;
+            @include breakpoint(xs) {
+                margin-bottom:30px;
+            }
+        }
+        .img {
+            position:relative;            
+            @include breakpoint(xs) {
+                margin-bottom:30px;
+            }
+            &::before {
+                background:$blue;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: -60px;
+                top: -60px;
+                z-index: -1;
+                @include breakpoint(xs){
+                    display:none;
+                }
+            }
+        }
+        .text {
+            background:#fff;
+            min-height:600px;
+        }        
+    }
+    .box1 {
+        @include breakpoint (xs) {
+            min-height:0;
+        }
+        h3 {
+            text-align: center;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .btn {
+            text-align: center;
+            margin-top:20px;
+        }
+    }
+    .box2 {
+        min-height:400px;
+        h3 {
+            text-align: center;
+        }
+    }
+    .twitter-timeline {
+        width:60%!important;
+        display:block!important;
+        margin: 0 auto;
+        @include breakpoint(xs) {
+            width:300px!important;
+        }
+    }
+}
+.candidates {
+    .equal {
+        margin-bottom:30px;
+    }
+    .candidate-teaser {
+        background:$lt-gray;
+        height:100%;
+        padding:20px;
+        .img {
+            border-radius: 100%;
+            cursor: pointer;
+            margin:0 auto;
+            overflow:hidden;
+            position: relative;
+            width:75%;
+            &::before {
+                background: transparent;
+                content: "";
+                position: absolute;
+                pointer-events: none;
+                width: 100%;
+                height: 100%;
+                @include transition(background .3s linear);
+            }            
+            &:hover, &:focus {
+                &::before {
+                    background: rgba($blue, .6);
+                }
+            }
+        }
+        .text {
+            text-align: center;
+            h3 {
+                margin:25px 0 5px;
+                font-size:22px;
+                font-family: $font-mw;
+            }
+            h4 {
+                color:$md-gray;
+                font-size:18px;
+                margin:0;
+            }
+        }
+    }
+}
+.news-teaser {
+    + .news-teaser {
+        margin-top:40px;
+        border-top:1px solid $lt-gray;
+    }
+}
+.event {
+    .date {
+        color:$blue-gray;
+        font-size:22px;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+}

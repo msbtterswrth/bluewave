@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Source+Sans+Pro:400,400i,700');
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/themes/bluewave/fonts/icomoon.eot?flchgt');
+  src:  url('/themes/bluewave/fonts/icomoon.eot?flchgt#iefix') format('embedded-opentype'),
+    url('/themes/bluewave/fonts/icomoon.ttf?flchgt') format('truetype'),
+    url('/themes/bluewave/fonts/icomoon.woff?flchgt') format('woff'),
+    url('/themes/bluewave/fonts/icomoon.svg?flchgt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e5cd";
+}
+.icon-bookmark:before {
+  content: "\e431";
+}
+.icon-retweet:before {
+  content: "\e040";
+}
+.icon-send:before {
+  content: "\e163";
+}
+.icon-secure:before {
+  content: "\e8e8";
+}
+.icon-gov:before {
+  content: "\e84f";
+}
+.icon-pdf:before {
+  content: "\e415";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-youtube:before {
+  content: "\f16a";
+}
+.icon-slack:before {
+  content: "\f198";
+}
+.icon-arrow-left:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-arrow-down:before {
+  content: "\e902";
+}
+.icon-menu:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e907";
+}
+.icon-phone:before {
+  content: "\e909";
+}
+.icon-calendar:before {
+  content: "\e90b";
+}
+
+.typography {
+    i {
+        font-size:24px
+    }
+    .example {
+        border:1px solid darken(#f5f5f5, 20%);
+        padding:30px 10px 10px;
+        position:relative;
+        &::after {
+            background-color: #ebebeb;
+            border: 1px solid #dddddd;
+            border-radius: 0 0 4px 0;
+            color: #9da0a4;
+            content: "Example";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: bold;
+            left: -1px;
+            padding: 3px 7px;
+            position: absolute;
+            top: -1px;
+        }
+        + code, + .codeblock {
+            background:#f5f5f5;
+            border:1px solid darken(#f5f5f5, 20%);
+            border-top:0;
+            color:#333;
+            display:block;
+            border-radius:0;
+            padding:10px;
+            code {
+                background:none;
+                border:none;
+                padding:0;
+            }
+        }
+    }
+    .row {
+        + .row {
+            margin-top:30px;
+        }
+    }
+}

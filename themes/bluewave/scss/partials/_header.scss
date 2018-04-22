@@ -1,0 +1,117 @@
+.header {
+    padding:20px 0;
+    img {
+        max-width:200px!important;
+        @include breakpoint(lg) {
+            max-width:300px!important;
+        }
+    }
+    .nav-toggle {
+        color:$dk-blue;
+        font-size:30px;
+        margin-top:10px;
+    }
+    .menu {
+        @include breakpoint(xs){
+            position: fixed;
+            z-index: 9;
+            width: 100%;
+            left: 0;
+            top: 100px;
+            max-height:0;
+            overflow: hidden;
+            @include transition(max-height .3s $cubic);
+            .nav-open & {
+                max-height:800px;
+                @include transition(max-height 1s $cubic);
+            }
+        }
+        nav {
+            @include breakpoint(xs){
+                background:$dk-blue;
+                padding:20px;
+            }
+            ul:not(.contextual-links) {
+                margin:0;
+                padding:0;
+                list-style-type: none;
+                text-align: right;
+                @include breakpoint(xs){
+                    text-align:left;
+                }
+                li {
+                    display:inline-block;
+                    @include breakpoint(xs){
+                        display:block;
+                    }
+                    + li {
+                        margin-left: 15px;
+                        @include breakpoint(xs) {
+                            margin-left: 0;
+                            margin-top:15px;
+                        }
+                    }
+                    a:not(.btn) {
+                        color:$blue-gray;
+                        font-size: 18px;
+                        position: relative;
+                        text-decoration:none;
+                        @include underline;
+                        @include breakpoint(sm) {
+                            font-size:14px
+                        }
+                        @include breakpoint(xs) {
+                            color:#fff;
+                        }
+                        &:hover, &:focus, &.is-active {
+                            color:$blue;
+                            @include breakpoint(xs) {
+                                color:#fff;
+                            }
+                        }
+                        &::before {
+                            background:$blue;
+                        }
+                        &::after {
+                            background:#fff;
+                        }
+                    }
+                }
+            }
+            &.utility {
+                margin-bottom:10px;
+                @include breakpoint(xs){
+                    background:$blue;
+                    margin-bottom:0;
+                }
+                ul {
+                    li {
+                        a {
+                            &:not(.btn) {
+                                color:$gray;
+                                font-size:16px;
+                                @include breakpoint(xs) {
+                                    font-size:18px;
+                                    color:#fff;
+                                }
+                                &:hover, &:focus {
+                                    color:$blue;
+                                    @include breakpoint(xs) {
+                                        color:#fff;
+                                    }
+                                }
+                            }
+                            &.btn {
+                                color:#fff;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sidenav-toggle {
+            display:none;
+        }
+    }    
+}

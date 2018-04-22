@@ -1,0 +1,5 @@
+# Schema for the configuration files of the bluewave theme.
+
+bluewave.settings:
+  type: theme_settings
+  label: 'Bluewave settings'
