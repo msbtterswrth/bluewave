@@ -171,6 +171,12 @@
         border-top:1px solid $lt-gray;
     }
 }
+.item {
+    + .item {
+        margin-top:40px;
+        border-top:1px solid $lt-gray;
+    }
+}
 .event {
     .date {
         color:$blue-gray;

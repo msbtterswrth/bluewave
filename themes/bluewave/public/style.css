@@ -1450,6 +1450,11 @@ fieldset legend {
   border-top: 1px solid #f5f5f5;
 }
 
+.item + .item {
+  margin-top: 40px;
+  border-top: 1px solid #f5f5f5;
+}
+
 .event .date {
   color: #323a45;
   font-size: 22px;
