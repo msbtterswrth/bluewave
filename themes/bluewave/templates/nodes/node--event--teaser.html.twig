@@ -7,7 +7,9 @@
                 {{ content.field_date }}
             </div>
         {% endif %}
-        {{ content.body }}
-        <a href="{{ url }}" class="btn red small" aria-label="{{ label.0 }}">Read More</a>
+        <p>{{ content.body.0 }}...</p>
+        <div>
+            <a href="{{ url }}" class="btn red small" aria-label="{{ label.0 }}">Read More</a>
+        </div>
     </div>
 </article>

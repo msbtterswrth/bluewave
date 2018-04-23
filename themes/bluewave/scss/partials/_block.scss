@@ -322,9 +322,23 @@
         }
     }
 }
+.news {
+    .teaser {
+        + .teaser {
+            margin-top:40px;
+            border-top:1px solid $lt-gray;
+        }
+    }
+}
 .events {
     margin-top:60px;
-    .event-teaser {
+    &.full {
+        margin-top:0;
+    }
+    footer {
+        clear:both;
+    }
+    .teaser {
         .text {
             background:$lt-gray;
             padding:20px;
