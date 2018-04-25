@@ -986,6 +986,7 @@ fieldset legend {
 .events .teaser .text {
   background: #f5f5f5;
   padding: 20px;
+  margin-bottom: 30px;
 }
 .events .teaser .text h3 {
   margin: 0;
@@ -1708,6 +1709,8 @@ body div[id*="local-tasks"] ul li a {
 }
 body .pager {
   text-align: left;
+  margin: 30px 15px;
+  clear: both;
 }
 body .pager ul {
   padding: 0;
