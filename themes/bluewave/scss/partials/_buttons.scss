@@ -194,3 +194,42 @@
         }
     }
 }
+.more-link {
+    display: block;
+    margin: 20px 0;
+    a {
+        background:$gray;
+        border-radius:0;
+        border:0!important;
+        box-shadow:none!important;
+        color:#fff;
+        outline:none!important;
+        font-weight: 700;
+        font-size:18px;
+        letter-spacing: 1px;
+        line-height:40px;
+        padding:10px 25px;
+        position: relative;
+        text-align: left;
+        text-decoration:none!important;
+        text-transform: uppercase;
+        z-index: 1;
+        @include transition(background .3s linear, color .3s linear);
+        &::after {
+            content: "";
+            background:$dk-gray;
+            position: absolute;
+            height: 3px;
+            width:0;
+            left: 0;
+            bottom: 0;
+            @include transition(width .3s $cubic);
+        }
+        &:hover, &:focus {
+            background: $md-gray;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -563,6 +563,54 @@ fieldset legend {
   color: #9f142b;
 }
 
+.more-link {
+  display: block;
+  margin: 20px 0;
+}
+.more-link a {
+  background: #afb0b5;
+  border-radius: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #fff;
+  outline: none !important;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  padding: 10px 25px;
+  position: relative;
+  text-align: left;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  z-index: 1;
+  -webkit-transition: background 0.3s linear, color 0.3s linear;
+  -moz-transition: background 0.3s linear, color 0.3s linear;
+  -ms-transition: background 0.3s linear, color 0.3s linear;
+  -o-transition: background 0.3s linear, color 0.3s linear;
+  transition: background 0.3s linear, color 0.3s linear;
+}
+.more-link a::after {
+  content: "";
+  background: #212121;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -ms-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -o-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+.more-link a:hover, .more-link a:focus {
+  background: #5b616b;
+}
+.more-link a:hover::after, .more-link a:focus::after {
+  width: 100%;
+}
+
 .slick .slick-arrow {
   position: absolute;
   background: rgba(255, 255, 255, 0.4);
@@ -867,6 +915,9 @@ fieldset legend {
   vertical-align: bottom;
   margin-bottom: 0;
 }
+.candidates-filter .form-item .form-text {
+  padding: 9px 10px 8px 10px;
+}
 .candidates-filter .form-item .bootstrap-select {
   display: inline-block;
   margin-left: 20px;
@@ -877,6 +928,14 @@ fieldset legend {
     display: block;
     width: 100% !important;
     margin: 0;
+  }
+}
+.candidates-filter .form-actions {
+  float: right;
+}
+@media (max-width: 767px) {
+  .candidates-filter .form-actions {
+    float: none;
   }
 }
 .candidates-filter .form-actions .btn {
@@ -979,6 +1038,14 @@ fieldset legend {
 .news .teaser + .teaser {
   margin-top: 40px;
   border-top: 1px solid #f5f5f5;
+}
+
+.podcasts article {
+  background: #f5f5f5;
+  padding: 20px;
+}
+.podcasts article h3 {
+  margin-top: 0;
 }
 
 .events {
@@ -1384,6 +1451,21 @@ fieldset legend {
   background: #fff;
   min-height: 600px;
 }
+.candidate .sidebar .event {
+  margin-bottom: 20px;
+}
+.candidate .sidebar .event .blurb {
+  background: #f5f5f5;
+  padding: 20px;
+}
+.candidate .sidebar .event .blurb h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-family: "Merriweather", serif;
+}
+.candidate .sidebar .event .blurb .date {
+  font-size: 18px;
+}
 @media (max-width: 767px) {
   .candidate .box1 {
     min-height: 0;
@@ -1396,6 +1478,15 @@ fieldset legend {
   font-size: 20px;
   margin-bottom: 0;
   text-align: center;
+}
+.candidate .box1 p:first-of-type {
+  width: 70%;
+  margin: 30px auto 30px;
+}
+@media (max-width: 767px) {
+  .candidate .box1 p:first-of-type {
+    width: 100%;
+  }
 }
 .candidate .box1 .btn {
   text-align: center;
@@ -1489,6 +1580,9 @@ body section .container {
   position: relative;
   height: 100%;
 }
+body section.banner {
+  margin-bottom: 30px;
+}
 body section.main + .feature {
   margin-top: 40px;
 }
@@ -1533,7 +1627,7 @@ body img.img-left {
 }
 body h1 {
   font-family: "Merriweather", serif;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 700;
   color: #112e50;
   line-height: 75px;
@@ -1547,7 +1641,7 @@ body h1 {
 body h2 {
   color: #0d71ba;
   font-family: "Merriweather", serif;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 700;
   line-height: 48px;
   margin: 0 0 20px 0;

@@ -221,6 +221,9 @@
             vertical-align: bottom;
             margin-bottom: 0;
         }
+        .form-text {
+            padding:9px 10px 8px 10px;
+        }
         .bootstrap-select {
             display: inline-block;
             margin-left: 20px;
@@ -233,6 +236,10 @@
         }
     }
     .form-actions {
+        float:right;
+        @include breakpoint(xs) {
+            float:none;
+        }
         .btn {
             background:$dk-blue;
             color:#fff;
@@ -327,6 +334,15 @@
         + .teaser {
             margin-top:40px;
             border-top:1px solid $lt-gray;
+        }
+    }
+}
+.podcasts {
+    article {
+        background:$lt-gray;
+        padding: 20px;
+        h3 {
+            margin-top: 0;
         }
     }
 }

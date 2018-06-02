@@ -88,6 +88,23 @@
             min-height:600px;
         }        
     }
+    .sidebar {
+        .event {
+            margin-bottom: 20px;
+            .blurb {
+                background:$lt-gray;
+                padding:20px;  ;
+                h4 {
+                    margin:5px 0;
+                    font-size:18px;
+                    font-family: $font-mw;
+                }
+                .date {
+                    font-size:18px;
+                }
+            }
+        }
+    }
     .box1 {
         @include breakpoint (xs) {
             min-height:0;
@@ -99,6 +116,13 @@
             font-size: 20px;
             margin-bottom: 0;
             text-align: center;
+            &:first-of-type {
+                width:70%;
+                margin:30px auto 30px;
+                @include breakpoint(xs) {
+                    width:100%;
+                }
+            }
         }
         .btn {
             text-align: center;
