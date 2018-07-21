@@ -51,6 +51,51 @@
                             margin-top:15px;
                         }
                     }
+                    &.level-1 {
+                        position: relative;
+                        &:hover {
+                            > ul {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                        > ul {
+                            border-top: 5px solid transparent;
+                            left: 0;
+                            min-width: 250px;
+                            opacity: 0;
+                            position: absolute;
+                            text-align: left;
+                            top: 100%;
+                            visibility: hidden;
+                            z-index: 9;
+                            @include transition(opacity .3s linear);
+                            li {
+                                display:block;
+                                margin: 0;
+                                + li {
+                                    margin: 0;
+                                }
+                                a {
+                                    background: $blue;
+                                    color: #fff;
+                                    display: block;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    padding: 10px 15px;
+                                    width: 100%;
+                                    @include transition(background .3s linear);
+                                    &:hover, &:focus, &.is-active {
+                                        background:darken($blue,15%);
+                                        color: #fff;
+                                    }
+                                    &::before, &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
                     a:not(.btn) {
                         color:$blue-gray;
                         font-size: 18px;

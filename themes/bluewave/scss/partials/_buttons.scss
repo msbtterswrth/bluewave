@@ -198,11 +198,11 @@
     display: block;
     margin: 20px 0;
     a {
-        background:$gray;
+        background:$red;
         border-radius:0;
         border:0!important;
         box-shadow:none!important;
-        color:#fff;
+        color:#fff!important;
         outline:none!important;
         font-weight: 700;
         font-size:18px;
@@ -217,7 +217,7 @@
         @include transition(background .3s linear, color .3s linear);
         &::after {
             content: "";
-            background:$dk-gray;
+            background: darken($red, 25%);
             position: absolute;
             height: 3px;
             width:0;
@@ -226,7 +226,7 @@
             @include transition(width .3s $cubic);
         }
         &:hover, &:focus {
-            background: $md-gray;
+            background: darken($red, 10%);
             &::after {
                 width: 100%;
             }

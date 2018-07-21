@@ -568,11 +568,11 @@ fieldset legend {
   margin: 20px 0;
 }
 .more-link a {
-  background: #afb0b5;
+  background: #e21e3e;
   border-radius: 0;
   border: 0 !important;
   box-shadow: none !important;
-  color: #fff;
+  color: #fff !important;
   outline: none !important;
   font-weight: 700;
   font-size: 18px;
@@ -592,7 +592,7 @@ fieldset legend {
 }
 .more-link a::after {
   content: "";
-  background: #212121;
+  background: #720f1f;
   position: absolute;
   height: 3px;
   width: 0;
@@ -605,7 +605,7 @@ fieldset legend {
   transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 .more-link a:hover, .more-link a:focus {
-  background: #5b616b;
+  background: #b61731;
 }
 .more-link a:hover::after, .more-link a:focus::after {
   width: 100%;
@@ -732,6 +732,30 @@ fieldset legend {
 *[class*="box"].box4 a {
   color: #fff;
 }
+*[class*="box"].box4 .more-link a {
+  background: #0d71ba;
+  color: #fff;
+}
+*[class*="box"].box4 .more-link a::after {
+  content: "";
+  background: #052943;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -ms-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -o-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+*[class*="box"].box4 .more-link a:hover, *[class*="box"].box4 .more-link a:focus {
+  background: #0a548a;
+}
+*[class*="box"].box4 .more-link a:hover::after, *[class*="box"].box4 .more-link a:focus::after {
+  width: 100%;
+}
 *[class*="box"].center {
   text-align: center;
 }
@@ -805,6 +829,24 @@ fieldset legend {
 }
 .hero .img img {
   width: 100%;
+  min-height: 400px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero .img img {
+    width: auto;
+    max-width: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero .img img {
+    width: auto;
+    max-width: none;
+  }
+}
+@media (max-width: 767px) {
+  .hero .img img {
+    min-height: 0;
+  }
 }
 .hero .text {
   position: absolute;
@@ -1171,6 +1213,57 @@ fieldset legend {
     margin-top: 15px;
   }
 }
+.header .menu nav ul:not(.contextual-links) li.level-1 {
+  position: relative;
+}
+.header .menu nav ul:not(.contextual-links) li.level-1:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+.header .menu nav ul:not(.contextual-links) li.level-1 > ul {
+  border-top: 5px solid transparent;
+  left: 0;
+  min-width: 250px;
+  opacity: 0;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  visibility: hidden;
+  z-index: 9;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.header .menu nav ul:not(.contextual-links) li.level-1 > ul li {
+  display: block;
+  margin: 0;
+}
+.header .menu nav ul:not(.contextual-links) li.level-1 > ul li + li {
+  margin: 0;
+}
+.header .menu nav ul:not(.contextual-links) li.level-1 > ul li a {
+  background: #0d71ba;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 15px;
+  width: 100%;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -ms-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.header .menu nav ul:not(.contextual-links) li.level-1 > ul li a:hover, .header .menu nav ul:not(.contextual-links) li.level-1 > ul li a:focus, .header .menu nav ul:not(.contextual-links) li.level-1 > ul li a.is-active {
+  background: #084672;
+  color: #fff;
+}
+.header .menu nav ul:not(.contextual-links) li.level-1 > ul li a::before, .header .menu nav ul:not(.contextual-links) li.level-1 > ul li a::after {
+  display: none;
+}
 .header .menu nav ul:not(.contextual-links) li a:not(.btn) {
   color: #323a45;
   font-size: 18px;
@@ -1334,6 +1427,9 @@ fieldset legend {
 .home-wrap .top {
   background: #0d71ba;
   padding: 60px 0;
+}
+.home-wrap .banner {
+  margin-bottom: 0;
 }
 .home-wrap .main + .feature {
   margin-top: 0;
@@ -1558,6 +1654,10 @@ fieldset legend {
 .item + .item {
   margin-top: 40px;
   border-top: 1px solid #f5f5f5;
+  padding-top: 40px;
+}
+.item h3, .item h4 {
+  margin-top: 0;
 }
 
 .event .date {

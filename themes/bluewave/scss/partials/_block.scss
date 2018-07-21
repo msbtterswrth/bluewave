@@ -48,6 +48,28 @@
         a {
             color:#fff;
         }
+        .more-link {
+            a {
+                background:$blue;
+                color:#fff;
+                &::after {
+                    content: "";
+                    background: darken($blue, 25%);
+                    position: absolute;
+                    height: 3px;
+                    width:0;
+                    left: 0;
+                    bottom: 0;
+                    @include transition(width .3s $cubic);
+                }
+                &:hover, &:focus {
+                    background: darken($blue, 10%);
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
     &.center {
         text-align:center;
@@ -123,6 +145,18 @@
         }
         img {
             width: 100%;
+            min-height: 400px;
+            @include breakpoint(md) {
+                width:auto;
+                max-width: none;
+            }
+            @include breakpoint(sm) {
+                width:auto;
+                max-width: none;
+            }
+            @include breakpoint(xs) {
+                min-height: 0;
+            }
         }
     }
     .text {
