@@ -1099,10 +1099,14 @@ fieldset legend {
 .events footer {
   clear: both;
 }
+.events .teaser {
+  margin-bottom: 30px;
+}
 .events .teaser .text {
   background: #f5f5f5;
-  padding: 20px;
+  height: 100%;
   margin-bottom: 30px;
+  padding: 20px;
 }
 .events .teaser .text h3 {
   margin: 0;

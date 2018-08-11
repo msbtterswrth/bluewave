@@ -389,10 +389,12 @@
         clear:both;
     }
     .teaser {
+        margin-bottom: 30px;
         .text {
             background:$lt-gray;
-            padding:20px;
+            height:100%;
             margin-bottom:30px;
+            padding:20px;
             h3 {
                 margin: 0;
             }
