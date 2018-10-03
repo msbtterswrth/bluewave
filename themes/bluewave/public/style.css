@@ -376,11 +376,11 @@ fieldset legend {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-.btn.white {
+.btn.blue {
   background: #0d71ba;
   color: #fff;
 }
-.btn.white::after {
+.btn.blue::after {
   content: "";
   background: #052943;
   position: absolute;
@@ -394,10 +394,10 @@ fieldset legend {
   -o-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
-.btn.white:hover, .btn.white:focus {
+.btn.blue:hover, .btn.blue:focus {
   background: #0a548a;
 }
-.btn.white:hover::after, .btn.white:focus::after {
+.btn.blue:hover::after, .btn.blue:focus::after {
   width: 100%;
 }
 .btn.dkblue {
