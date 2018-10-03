@@ -376,11 +376,11 @@ fieldset legend {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-.btn.blue {
+.btn.white {
   background: #0d71ba;
   color: #fff;
 }
-.btn.blue::after {
+.btn.white::after {
   content: "";
   background: #052943;
   position: absolute;
@@ -394,10 +394,10 @@ fieldset legend {
   -o-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
-.btn.blue:hover, .btn.blue:focus {
+.btn.white:hover, .btn.white:focus {
   background: #0a548a;
 }
-.btn.blue:hover::after, .btn.blue:focus::after {
+.btn.white:hover::after, .btn.white:focus::after {
   width: 100%;
 }
 .btn.dkblue {
@@ -886,7 +886,7 @@ fieldset legend {
   margin-top: 0;
 }
 .hero .text .blurb p {
-  color: #afb0b5;
+  color: #5b616b;
   font-size: 20px;
   line-height: 28px;
 }
@@ -1653,6 +1653,13 @@ fieldset legend {
   color: #5b616b;
   font-size: 18px;
   margin: 0;
+}
+
+.product.teaser {
+  border: 1px solid rgba(13, 113, 186, 0.2);
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .item + .item {

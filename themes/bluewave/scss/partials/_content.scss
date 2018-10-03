@@ -189,6 +189,14 @@
         }
     }
 }
+.product {
+    &.teaser {
+        border: 1px solid rgba($blue,.2);
+        padding:15px;
+        margin-bottom: 20px;
+        text-align: center
+    }
+}
 .item {
     + .item {
         margin-top:40px;
