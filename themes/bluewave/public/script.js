@@ -11,7 +11,10 @@
         $('.equal-group').each(function(){
             $(this).find('.equal').matchHeight();
         });
-      $('.equal-group').each(function(){
+        $('.equal-row article').matchHeight({
+            byRow: false,
+        });
+        $('.equal-group').each(function(){
             $(this).find('.equal-match').matchHeight({
                 target: $('.equal-match.match'),
             });
